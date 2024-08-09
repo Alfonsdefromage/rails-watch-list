@@ -3,10 +3,13 @@
 <div class="container">
 
   <div class="card p-3 form">
+    <div>
     <h2>Create a new list</h2>
+    <%= image_tag "FMJ.webp", alt: "angry man", class: "form-img" %>
+    </div>
     <%= simple_form_for @list do |f|%>
-      <%= f.input :name %>
-      <%= f.input :photo, as: :file %>
+      <%= f.input :name, input_html: { class: "form-input" } %>
+      <%= f.input :photo, as: :file, input_html: { class: "form-input" } %>
       <%= f.button :submit %>
     <%end%>
   </div>
