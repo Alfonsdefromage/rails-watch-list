@@ -1,0 +1,50 @@
+.navbar-lewagon {
+  justify-content: space-between;
+  position: relative;
+  background: $red;
+  color: $light-gray;
+  position: relative
+
+  d-flex {
+    gap: 8px;
+  }
+
+  h3 {
+    position: absolute;
+    top: 8px;
+    left: 50px;
+    margin-top: 4px;
+    height: 32px;
+  }
+
+  a {
+    color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+    text-decoration: none;
+    background-color: $red;
+    color: $light-gray;
+    padding: 4px;
+    border-radius: 8px;
+  }
+
+  img {
+    position: absolute;
+    left: 10px;
+    width: 32px;
+    height: 32px;
+    top: 11px;
+  }
+
+  p {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+}
+
+// .home-button {
+//   position: absolute;
+//   top: 0px;
+//   left: 0px;
+//   bottom: 0px;
+//   width: 100%;
+// }

@@ -1,0 +1,15 @@
+<%= render "share/navbar" %>
+
+<div class="container">
+
+
+  <div class="form p-3">
+    <h2>Add a new movie to your watchlist</h2>
+    <%= simple_form_for [@list, @bookmark] do |f| %>
+      <%= f.association :movie, collection: @movies %>
+      <%= f.input :comment %>
+      <%= f.submit %>
+    <%end%>
+  </div>
+
+</div>

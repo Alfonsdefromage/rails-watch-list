@@ -1,0 +1,112 @@
+.card-movie {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.card-movie > img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-movie h2 {
+  font-size: 16px;
+  font-weight: bold;
+  color: $light-black;
+  margin: 0;
+}
+
+.card-movie p {
+  font-size: 12px;
+  color: $gray;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-movie .card-movie-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  color: $silver;
+}
+
+.card-movie-infos .card-movie-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+
+.card-movie-infos .card-movie-rating {
+  position: absolute;
+  background: $rating-green;
+  top: 88px;
+  right: 16px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 4px;
+  border-color: $light-black;
+
+}
+
+.card-movies-head {
+  margin-top: 8px;
+  color: $light-black;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    height: 8px;
+    text-decoration: none;
+  }
+}
+
+.show-delete {
+  a {
+    top: -36px;
+    right: 16px;
+    font-size: 12px;
+    position: absolute;
+    text-decoration: none;
+    color: $rating-red;
+  }
+}
+
+.show-comment {
+  position: absolute;
+  bottom: -36px;
+  left: 139px;
+  font-size: 12px;
+  color: black;
+}
+
+.list-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  a {
+    top: 15px;
+    right: -8px;
+    position: absolute;
+    height: 4px;
+    width: 4px;
+  }
+}

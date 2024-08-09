@@ -1,0 +1,41 @@
+<%= render "share/navbar" %>
+
+<div class="container">
+
+  <div class="card-movies-head">
+    <div class="list-title">
+      <h1><%= @list.name %></h1>
+      <%= link_to list_path(@list), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
+        <i class="fa-regular fa-trash-can" style="color: #FF1B1C"></i>
+      <%end%>
+    </div>
+
+    <%=link_to new_list_bookmark_path(@list) do %>
+      <i class="fa-regular fa-square-plus"></i> Add a new movie
+    <%end%>
+
+  </div>
+
+  <div>
+    <% @list.movies.each do |movie| %>
+    <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
+      <div class="card-movie">
+        <%= image_tag movie.poster_url, alt: "movie poster" %>
+        <div class="card-movie-infos">
+          <div class="show-delete">
+            <%= link_to "delete", bookmark_path(bookmark), data:  { turbo_method: :delete, turbo_confirm: "Delete #{movie.title}?" }  %>
+          </div>
+          <div>
+            <h2><%= movie.title %></h2>
+            <p><%= movie.overview %></p>
+          </div>
+          <h2 class="card-movie-rating"><%= movie.rating.round(1) %></h2>
+          <div class="show-comment">
+            Memo: "<%= bookmark.comment %>"
+          </div>
+        </div>
+      </div>
+    <%end%>
+  </div>
+
+</div>
